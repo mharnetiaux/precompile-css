@@ -1,0 +1,10 @@
+@mixin rounded-corner($arc) {
+    -moz-border-radius: $arc;
+    -webkit-border-radius: $arc;
+    border-radius: $arc;
+}
+
+@mixin btn-background-image($src) {
+    background-image: url($src);
+    @extend %bg-image-cover;
+}
