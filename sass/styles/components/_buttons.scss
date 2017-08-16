@@ -1,6 +1,0 @@
-    .tab-button {
-        font-family: $font-primary;
-        color: $link-primary;
-        @include rounded-corner(5px);
-        @include btn-background-image('../images/bg.png');
-    }
