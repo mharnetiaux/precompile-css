@@ -1,1 +1,3 @@
-import '/Users/mattdharnetiaux/CSS/src/sass/main.scss';
+import '../src/sass/main.scss';
+import '../src/less/main.less';
+

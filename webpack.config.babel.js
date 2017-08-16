@@ -14,18 +14,25 @@ const config = {
     },
     module: {
         rules: [{
-            test: /\.js$/,
-            include: path.resolve(__dirname, 'src'),
-        }, {
-            test: /\.scss$/,
-            loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader'])
-        }, {
-            test: /\.(png|jpg)$/,
-            use: [{
-                loader: 'url-loader',
-                options: { limit: 10000 } // Convert images < 10k to base64 strings
-            }]
-        }]
+                test: /\.js$/,
+                include: path.resolve(__dirname, 'src'),
+            },
+            {
+                test: /\.scss$/,
+                loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader'])
+            },
+            {
+                test: /\.less$/i,
+                loader: ExtractTextPlugin.extract(['css-loader', 'less-loader'])
+            },
+            {
+                test: /\.(png|jpg)$/,
+                use: [{
+                    loader: 'url-loader',
+                    options: { limit: 10000 } // Convert images < 10k to base64 strings
+                }]
+            }
+        ]
     },
     plugins: [
         new ExtractTextPlugin("bundle.css"),
